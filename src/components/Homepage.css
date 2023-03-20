@@ -6,6 +6,9 @@ body {
   overflow-x: hidden;
   /* background-color: antiquewhite; */
   position: relative;
+  /* font-family: "Armata", sans-serif; */
+
+  font-family: "Cutive Mono", monospace;
 }
 .App {
   display: flex;

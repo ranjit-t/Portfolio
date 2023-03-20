@@ -4,7 +4,6 @@ import YinYang from "../yinyong.svg";
 import Profile from "../profile-orig.png";
 import { Github, YouTube, Twitter } from "../AllSVGs.js";
 
-// import { Github } from "../AllSVGs.js";
 import "./Homepage.css";
 
 export default function Homepage() {
@@ -38,12 +37,16 @@ export default function Homepage() {
       >
         <img src={YinYang} className="spinner-logo" alt="Loading" />
 
-        <p>Start</p>
+        <p className={isLoading ? "" : "no-display"}>
+          <b>START</b>
+        </p>
       </div>
       <div className={isLoading ? "no-display" : "intro-box"}>
         <div className="intro-text">
           <h1>Hi, There! 👋</h1>
-          <p>I'm Ranjit</p>
+          <p>
+            <b>I'm Ranjit</b>
+          </p>
         </div>
         <div className="intro-img">
           <img src={Profile} className="Profile-PNG" alt="Profile" />
