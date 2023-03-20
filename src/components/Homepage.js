@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 // useEffect,
 import YinYang from "../yinyong.svg";
-import Profile from "../profile.png";
+import Profile from "../profile-orig.png";
+import { Github, YouTube, Twitter } from "../AllSVGs.js";
 
 // import { Github } from "../AllSVGs.js";
 import "./Homepage.css";
@@ -56,6 +57,12 @@ export default function Homepage() {
       </div>
       <div className={isLoading ? "no-display" : "contact-heading"}>
         <h2>Contact</h2>
+      </div>
+      <div className={isLoading ? "no-display" : "contact-bar"}>
+        <Github fill="white" width="30px" />
+        <YouTube fill="white" width="30px" />
+        <Twitter fill="white" width="30px" />
+        <hr />
       </div>
     </div>
   );

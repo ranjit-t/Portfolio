@@ -6,9 +6,6 @@ body {
   overflow-x: hidden;
   /* background-color: antiquewhite; */
   position: relative;
-
-  /* background-color: grey; */
-  /* color: white; */
 }
 .App {
   display: flex;
@@ -36,9 +33,13 @@ body {
   animation: grow-loader 2s linear;
   font-size: 20px;
 }
+h2 {
+  transition: all 0.5s ease-in;
+}
 h2:hover {
-  font-size: 25px;
+  /* font-size: 25px; */
   cursor: pointer;
+  transform: scale(1.1);
 }
 
 @keyframes spin {
@@ -67,7 +68,7 @@ h2:hover {
   height: 200px;
   position: absolute;
   top: 250px;
-  animation: move-loader2 1s linear;
+  animation: move-loader2 0.7s linear;
 }
 .loading-spinner-off {
   cursor: pointer;
@@ -75,7 +76,7 @@ h2:hover {
   height: 100px;
   position: absolute;
   top: 20px;
-  animation: move-loader 1s linear;
+  animation: move-loader 0.7s linear;
 }
 @keyframes move-loader {
   0% {
@@ -276,5 +277,30 @@ h2:hover {
   }
   .intro-img {
     border: 1px solid black;
+  }
+}
+
+.contact-bar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  animation: contact-bar-anime 2s linear;
+}
+.contact-bar > * {
+  margin-bottom: 20px;
+}
+hr {
+  height: 100px;
+}
+
+@keyframes contact-bar-anime {
+  0% {
+    bottom: -1000px;
+  }
+
+  100% {
+    bottom: 0;
   }
 }
