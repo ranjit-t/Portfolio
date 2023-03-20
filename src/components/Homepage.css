@@ -4,7 +4,7 @@ body {
   padding: none;
   text-align: center;
   overflow-x: hidden;
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
   position: relative;
 
   /* background-color: grey; */
@@ -19,25 +19,6 @@ body {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-}
-.grid-lines-parent {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  z-index: -4;
-}
-.grid-lines-1 {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  background-color: black;
-}
-.grid-lines-2 {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  background-color: grey;
 }
 
 .no-display {
@@ -130,18 +111,18 @@ h2:hover {
 /* Box */
 
 .intro-box {
-  width: 70%;
-  overflow: hidden;
+  width: 65%;
   border: 2px solid black;
-  animation: grow 1s linear;
   height: 150px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   margin-top: -150px;
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: space-evenly;
+  animation: grow 2s linear;
+  z-index: -5;
 }
+
 @keyframes grow {
   0% {
     height: 0;
@@ -157,22 +138,15 @@ h2:hover {
   }
 }
 
-@keyframes move-spinner {
-  0% {
-    height: 200px;
-    width: 200px;
-  }
-  100% {
-    height: 100px;
-    width: 100px;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-  }
+.Profile-PNG {
+  margin-top: -150px;
+  height: 300px;
+  width: auto;
 }
+
 .work-heading {
   position: absolute;
-  bottom: 10px;
+  bottom: 1px;
   animation: move1 1s ease-in;
   visibility: visible;
   display: flex;
@@ -180,6 +154,7 @@ h2:hover {
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
+  color: white;
 }
 @keyframes move1 {
   0% {
@@ -188,12 +163,13 @@ h2:hover {
   }
   100% {
     position: absolute;
-    bottom: 10px;
+    bottom: 1px;
   }
 }
 .about-heading {
+  margin-top: -80px;
   position: absolute;
-  left: 10px;
+  left: 1px;
   transform: rotate(-90deg);
   animation: move2 1s ease-in;
   visibility: visible;
@@ -206,12 +182,13 @@ h2:hover {
   }
   100% {
     position: absolute;
-    left: 10px;
+    left: 1px;
   }
 }
 .contact-heading {
+  margin-top: -100px;
   position: absolute;
-  right: 10px;
+  right: 1px;
   transform: rotate(90deg);
   animation: move3 1s ease-in;
   visibility: visible;
@@ -223,6 +200,70 @@ h2:hover {
   }
   100% {
     position: absolute;
-    right: 10px;
+    right: 1px;
+  }
+}
+.grid-lines {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.grid-line-1 {
+  background-color: black;
+  color: black;
+  content: "\A";
+  width: 100%;
+  height: 50vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -2;
+  animation: black-screen 0.5s linear;
+}
+.grid-line-1-no-display {
+  background-color: black;
+  content: "";
+  width: 100%;
+  height: 50vh;
+  position: absolute;
+  bottom: 0;
+  left: -1500px;
+  z-index: -2;
+  /* animation: black-screen-inverse 0.5s linear; */
+}
+
+@keyframes black-screen {
+  0% {
+    left: -1500px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+@keyframes black-screen-inverse {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 1500px;
+  }
+}
+@media (max-width: 767px) {
+  .intro-box {
+    display: flex;
+    flex-direction: column-reverse;
+    height: auto;
+    margin-top: 150px;
+    color: white;
+    z-index: 2;
+    border: none;
+  }
+  .intro-text {
+    border: 1px solid white;
+    padding: 20px;
+  }
+  .intro-img {
+    border: 1px solid black;
   }
 }
