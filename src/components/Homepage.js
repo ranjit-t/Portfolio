@@ -41,7 +41,7 @@ export default function Homepage() {
       </div>
       <div className={isLoading ? "no-display" : "intro-box"}>
         <div className="intro-text">
-          <h1>Hello There! 👋</h1>
+          <h1>Hi, There! 👋</h1>
           <p>I'm Ranjit</p>
         </div>
         <div className="intro-img">
