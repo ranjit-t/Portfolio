@@ -48,8 +48,6 @@ export default function Homepage() {
           <img src={Profile} className="Profile-PNG" alt="Profile" />
         </div>
       </div>
-      <hr></hr>
-
       <div className={isLoading ? "no-display" : "work-heading"}>
         <h2>Work</h2>
       </div>
