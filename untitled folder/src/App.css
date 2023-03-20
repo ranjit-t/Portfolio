@@ -1,0 +1,197 @@
+html,
+body {
+  margin: none;
+  padding: none;
+  text-align: center;
+  overflow-x: hidden;
+  background-color: antiquewhite;
+  /* background-color: grey; */
+  /* color: white; */
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.grid-lines-parent {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  z-index: -4;
+}
+.grid-lines-1 {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  background-color: black;
+}
+.grid-lines-2 {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  /* background-color: white; */
+  background-color: grey;
+}
+
+.no-display {
+  visibility: hidden;
+}
+
+.spinner-logo {
+  animation: grow-loader 2s linear, spin 2s linear infinite;
+  border-radius: 100%;
+  padding: 1px;
+  border: 8px solid black;
+}
+.loading-spinner {
+  position: absolute;
+  cursor: pointer;
+}
+.loading-spinner p {
+  animation: grow-loader 2s linear;
+  font-size: 20px;
+}
+h2:hover {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes grow-loader {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Box */
+
+.intro-box {
+  width: 400px;
+  overflow: hidden;
+  border: 2px solid black;
+  animation: grow 1s linear;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@keyframes grow {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 150px;
+  }
+}
+
+@keyframes move-spinner {
+  0% {
+    height: 200px;
+    width: 200px;
+  }
+  100% {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+}
+.work-heading {
+  position: absolute;
+  bottom: 10px;
+  animation: move1 1s ease-in;
+  visibility: visible;
+}
+@keyframes move1 {
+  0% {
+    position: absolute;
+    bottom: -110px;
+  }
+  100% {
+    position: absolute;
+    bottom: 10px;
+  }
+}
+.about-heading {
+  position: absolute;
+  left: 10px;
+  transform: rotate(-90deg);
+  animation: move2 1s ease-in;
+  visibility: visible;
+}
+@keyframes move2 {
+  0% {
+    position: absolute;
+    left: -110px;
+  }
+  100% {
+    position: absolute;
+    left: 10px;
+  }
+}
+.contact-heading {
+  position: absolute;
+  right: 10px;
+  transform: rotate(90deg);
+  animation: move3 1s ease-in;
+  visibility: visible;
+}
+@keyframes move3 {
+  0% {
+    position: absolute;
+    right: -110px;
+  }
+  100% {
+    position: absolute;
+    right: 10px;
+  }
+}
+.spinner-logo-in-app {
+  height: 100px;
+  width: 100px;
+  animation: move-spinner 2s linear;
+  position: absolute;
+  top: 10px;
+  border-radius: 100%;
+  padding: 1px;
+  border: 4px solid black;
+}
+@keyframes move-spinner {
+  0% {
+    visibility: hidden;
+    height: 200px;
+    width: 200px;
+    transform: rotate(0deg);
+  }
+
+  100% {
+    position: absolute;
+    top: 10px;
+    visibility: visible;
+    height: 100px;
+    width: 100px;
+    transform: rotate(360deg);
+  }
+}
