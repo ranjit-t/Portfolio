@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-// useEffect,
+
 import YinYang from "../yinyong.svg";
 import Profile from "../profile-orig.png";
-import { Github, YouTube, Twitter } from "../AllSVGs.js";
+import { Github, YouTube, Twitter } from "../assets/AllSVGs.js";
 
 import "./Homepage.css";
 
