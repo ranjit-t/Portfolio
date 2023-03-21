@@ -45,7 +45,7 @@ export default function Homepage() {
         <div className="intro-text">
           <h1>Hi, There! 👋</h1>
           <p>
-            <b>I'm Ranjit</b>
+            <b>I'm Ranjith</b>
           </p>
         </div>
         <div className="intro-img">
@@ -62,7 +62,11 @@ export default function Homepage() {
         <h2>Contact</h2>
       </div>
       <div className={isLoading ? "no-display" : "contact-bar"}>
-        <Github fill="white" width="30px" />
+        <a href="https://github.com/ranjit-t/" target="_blank" rel="noreferrer">
+          {" "}
+          <Github fill="white" width="30px" />
+        </a>
+
         <YouTube fill="white" width="30px" />
         <Twitter fill="white" width="30px" />
         <hr />
