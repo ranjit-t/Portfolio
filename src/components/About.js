@@ -11,6 +11,7 @@ import node from "../frontend-png/node.png";
 import firebase from "../frontend-png/firebase.png";
 import git from "../frontend-png/git.png";
 import redux from "../frontend-png/redux.png";
+import { Github, YouTube, Twitter } from "../assets/AllSVGs.js";
 
 const About = () => {
   const particlesInit = async (main) => {
@@ -31,10 +32,10 @@ const About = () => {
           <div>
             I am Ranjith Thota,
             <br /> <br />
-            I'm a front-end developer located in France. I love to create simple
-            yet beautiful websites with great user experience. I have been in
-            web development since 2017. And eversince, Front End Design has not
-            only my work but my Art.
+            A Front-End Developer located in France. I love creating simple yet
+            beautiful websites with great user experience. I have been in web
+            development since 2017. And eversince, Front End Design has not only
+            my work but my Art.
             <br /> <br />
             "I believe everything is an Art when you put your consciousness in
             it."
@@ -87,6 +88,16 @@ const About = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="contact-bar">
+        <a href="https://github.com/ranjit-t/" target="_blank" rel="noreferrer">
+          {" "}
+          <Github fill="white" width="30px" />
+        </a>
+
+        <YouTube fill="white" width="30px" />
+        <Twitter fill="white" width="30px" />
+        <hr />
       </div>
     </div>
   );

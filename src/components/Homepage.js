@@ -56,7 +56,9 @@ export default function Homepage() {
         <h2>Work</h2>
       </div>
       <div className={isLoading ? "no-display" : "about-heading"}>
-        <h2>About</h2>
+        <a href="/about">
+          <h2>About</h2>
+        </a>
       </div>
       <div className={isLoading ? "no-display" : "contact-heading"}>
         <h2>Contact</h2>
