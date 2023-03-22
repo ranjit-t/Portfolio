@@ -227,6 +227,9 @@ h2:hover {
   display: grid;
   grid-template-columns: 50% 50%;
 }
+.grid-line-2 {
+  background-color: white;
+}
 .grid-line-1 {
   background-color: black;
   color: black;
