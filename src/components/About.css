@@ -3,21 +3,25 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100%;
+  /* height: 100%;
+  width: 100%; */
   margin-left: auto;
   margin-right: auto;
   color: black;
 }
-.hidden {
-  display: none;
-}
+
 .about-page-heading {
   color: white;
   position: absolute;
   top: 10px;
   font-size: 60px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
+/* .row1 {
+  height: 100%;
+} */
 .space-man img {
   z-index: -1;
   height: 400px;
@@ -52,8 +56,8 @@
   border: 2px solid white;
   color: white;
   padding: 1rem;
-  width: 50vw;
-  height: 45vh;
+  width: 50%;
+  height: 45%;
   z-index: 3;
   line-height: 1.1;
   display: flex;
@@ -63,27 +67,78 @@
   backdrop-filter: blur(4px);
   position: absolute;
   left: 10%;
-  top: 10rem;
+  top: 9rem;
   font-style: italic;
   margin-top: 100px;
   transition: 1s all ease-in-out;
-  border-radius: 20px;
-}
-.about-box div:hover {
-  background-color: white;
-  color: black;
-  border: 2px solid black;
-
-  outline: 2px solid white;
-  outline-offset: 20px;
 }
 
 .row2 {
-  margin-top: 150vh;
+  position: absolute;
+  top: 100%;
   width: 60%;
-  font-size: calc(0.6rem + 1.3vw);
+  height: 100%;
   color: white;
+  font-size: calc(0.6rem + 1.1vw);
 }
+.skills-box {
+  margin-bottom: 70px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.skills-box p {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+.skills-png {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  column-gap: 20px;
+  font-weight: bold;
+}
+.skills-png div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.skills-png div img {
+  margin-top: 20px;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border: 2px solid white;
+  padding: 20px;
+  animation: skills-img-moves 3s linear infinite;
+}
+@keyframes skills-img-moves {
+  0% {
+    position: relative;
+    left: 0px;
+  }
+  25% {
+    position: relative;
+    left: 5px;
+  }
+  50% {
+    position: relative;
+    left: 0px;
+  }
+  75% {
+    position: relative;
+    left: -5px;
+  }
+  100% {
+    position: relative;
+    left: 0px;
+  }
+}
+
 @media (max-width: 650px) {
   .space-man img {
     height: 200px;
@@ -107,7 +162,9 @@
       right: 2%;
     }
   }
-  .row2 {
-    margin-top: 120vh;
+  .skills-png div img {
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
   }
 }

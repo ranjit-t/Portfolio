@@ -3,6 +3,14 @@ import ConfigDark from "../config/particlesjs-config.json";
 import Spaceman from "../assets/Images/spaceman.png";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
+import html from "../frontend-png/html.png";
+import css from "../frontend-png/css.png";
+import js from "../frontend-png/js.png";
+import react from "../frontend-png/react.png";
+import node from "../frontend-png/node.png";
+import firebase from "../frontend-png/firebase.png";
+import git from "../frontend-png/git.png";
+import redux from "../frontend-png/redux.png";
 
 const About = () => {
   const particlesInit = async (main) => {
@@ -17,8 +25,8 @@ const About = () => {
         params={ConfigDark}
         init={particlesInit}
       />
+      <h1 className="about-page-heading">About</h1>
       <div className="row1">
-        <h1 className="about-page-heading">About</h1>
         <div className="about-box">
           <div>
             I am Ranjith Thota,
@@ -41,17 +49,43 @@ const About = () => {
         <div className="skills-box">
           <h1 className="">Skills</h1>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non porro
-            nulla, qui neque eos impedit minus vitae quam similique facere,
-            blanditiis doloremque officiis cum ex sit numquam laboriosam sed
-            ducimus.
+            Here are a few technologies that I've been working with recently.
           </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non porro
-            nulla, qui neque eos impedit minus vitae quam similique facere,
-            blanditiis doloremque officiis cum ex sit numquam laboriosam sed
-            ducimus.
-          </p>
+          <div className="skills-png">
+            <div>
+              HTML
+              <img src={html} alt="html" />
+            </div>
+            <div>
+              CSS
+              <img src={css} alt="css" />
+            </div>
+            <div>
+              Javascript
+              <img src={js} alt="js" />
+            </div>
+
+            <div>
+              Node.Js
+              <img src={node} alt="node" />
+            </div>
+            <div>
+              React
+              <img src={react} alt="react" />
+            </div>
+            <div>
+              Redux
+              <img src={redux} alt="redux" />
+            </div>
+            <div>
+              Git
+              <img src={git} alt="git" />
+            </div>
+            <div>
+              Firebase
+              <img src={firebase} alt="firebase" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
