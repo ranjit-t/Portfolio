@@ -76,7 +76,13 @@ export default function Homepage() {
           </h2>
         </div>
         <div className={isLoading ? "no-display" : "contact-heading"}>
-          <h2>Contact</h2>
+          <h2
+            onClick={() => {
+              navigate("/about/#skills");
+            }}
+          >
+            Contact
+          </h2>
         </div>
         <div className={isLoading ? "no-display" : "contact-bar"}>
           <a

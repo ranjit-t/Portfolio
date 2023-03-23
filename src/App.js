@@ -7,6 +7,7 @@ import About from "./components/About";
 import Rlogo from "./Rlogo.svg";
 
 import { AnimatePresence } from "framer-motion";
+import Work from "./components/Work";
 
 function App() {
   const location = useLocation();
@@ -19,6 +20,7 @@ function App() {
         <Routes key={location.pathname} location={location}>
           <Route path="/" element={<Homepage />} />
           <Route path="/about" element={<About />} />
+          <Route path="/work" element={<Work />} />
         </Routes>
       </AnimatePresence>
     </div>

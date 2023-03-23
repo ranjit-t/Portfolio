@@ -57,7 +57,7 @@ const About = () => {
             <img src={Spaceman} alt="spaceman" />
           </div>
         </div>
-        <div className="row2">
+        <div className="row2" id="skills">
           <div className="skills-box">
             <h1 className="">Skills</h1>
             <p>
@@ -122,8 +122,20 @@ const About = () => {
           >
             Home
           </p>
-          <p>About</p>
-          <p>Work</p>
+          <p
+            onClick={() => {
+              navigate("/work");
+            }}
+          >
+            Work
+          </p>
+          <p
+            onClick={() => {
+              navigate("/contact");
+            }}
+          >
+            Contact
+          </p>
 
           <hr />
         </div>
