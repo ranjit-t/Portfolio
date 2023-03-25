@@ -64,7 +64,13 @@ export default function Homepage() {
           </div>
         </div>
         <div className={isLoading ? "no-display" : "work-heading"}>
-          <h2>Work</h2>
+          <h2
+            onClick={() => {
+              navigate("/work");
+            }}
+          >
+            Work
+          </h2>
         </div>
         <div className={isLoading ? "no-display" : "about-heading"}>
           <h2
@@ -76,13 +82,15 @@ export default function Homepage() {
           </h2>
         </div>
         <div className={isLoading ? "no-display" : "contact-heading"}>
-          <h2
-            onClick={() => {
-              navigate("/about/#skills");
-            }}
-          >
-            Contact
-          </h2>
+          <a href="mailto:amailtoranjith@gmail.com">
+            <h2
+            // onClick={() => {
+            //   navigate("/");
+            // }}
+            >
+              Contact
+            </h2>
+          </a>
         </div>
         <div className={isLoading ? "no-display" : "contact-bar"}>
           <a
