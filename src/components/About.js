@@ -11,7 +11,8 @@ import node from "../frontend-png/node.png";
 import firebase from "../frontend-png/firebase.png";
 import git from "../frontend-png/git.png";
 import redux from "../frontend-png/redux.png";
-import { Github, YouTube, Twitter } from "../assets/AllSVGs.js";
+// import { Github, YouTube, Twitter } from "../assets/AllSVGs.js";
+import { Github } from "../assets/AllSVGs.js";
 
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router";
@@ -109,9 +110,9 @@ const About = () => {
             {" "}
             <Github fill="white" width="30px" />
           </a>
-
+          {/* 
           <YouTube fill="white" width="30px" />
-          <Twitter fill="white" width="30px" />
+          <Twitter fill="white" width="30px" /> */}
           <hr />
         </div>
         <div className="nav-bar">
@@ -129,12 +130,8 @@ const About = () => {
           >
             Work
           </p>
-          <p
-            onClick={() => {
-              navigate("/contact");
-            }}
-          >
-            Contact
+          <p>
+            <a href="mailto:amailtoranjith@gmail.com">Contact</a>
           </p>
 
           <hr />

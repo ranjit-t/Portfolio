@@ -3,7 +3,8 @@ import { useNavigate } from "react-router";
 
 import YinYang from "../yinyong.svg";
 import Profile from "../profile-orig.png";
-import { Github, YouTube, Twitter } from "../assets/AllSVGs.js";
+// import { Github, YouTube, Twitter } from "../assets/AllSVGs.js";
+import { Github } from "../assets/AllSVGs.js";
 
 import "./Homepage.css";
 
@@ -83,13 +84,7 @@ export default function Homepage() {
         </div>
         <div className={isLoading ? "no-display" : "contact-heading"}>
           <a href="mailto:amailtoranjith@gmail.com">
-            <h2
-            // onClick={() => {
-            //   navigate("/");
-            // }}
-            >
-              Contact
-            </h2>
+            <h2>Contact</h2>
           </a>
         </div>
         <div className={isLoading ? "no-display" : "contact-bar"}>
@@ -102,8 +97,8 @@ export default function Homepage() {
             <Github fill="white" width="30px" />
           </a>
 
-          <YouTube fill="white" width="30px" />
-          <Twitter fill="white" width="30px" />
+          {/* <YouTube fill="white" width="30px" />
+          <Twitter fill="white" width="30px" /> */}
           <hr />
         </div>
       </div>

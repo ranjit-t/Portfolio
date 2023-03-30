@@ -4,7 +4,8 @@ import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 // import YinYang from "../yinyong.png";
 
-import { Github, YouTube, Twitter } from "../assets/AllSVGs.js";
+// import { Github, YouTube, Twitter } from "../assets/AllSVGs.js";
+import { Github } from "../assets/AllSVGs.js";
 
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router";
@@ -101,14 +102,22 @@ export default function Work() {
               </h1>
               <div className="Project-Descr">
                 <div className="para">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Dolorum ut cumque debitis earum perferendis porro ratione ex
-                  soluta, repudiandae sint! Nulla labore debitis sequi est dicta
-                  mollitia voluptate illum itaque? Lorem ipsum dolor sit, amet
-                  consectetur adipisicing elit. Dicta adipisci maiores, nisi
-                  nihil quasi facere esse in labore incidunt laboriosam!
-                  Voluptatum minima ex quos fugit numquam, eveniet labore vel
-                  aliquam.
+                  <ul>
+                    <li>
+                      A web app that helps users to keep track of their daily
+                      expenses. Create your account, add the transactions you
+                      made and delete them when you need to.
+                    </li>
+                    <li>
+                      The app will store the transactions for you, so you can
+                      come back whenever you wish. Just log back in and you'll
+                      find everything as you've left it!
+                    </li>
+                    <li>
+                      <b>Technologies Used:</b> HTML, CSS, React.Js, Firebase
+                      Storage and Authentication.
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -119,14 +128,19 @@ export default function Work() {
               </h1>
               <div className="Project-Descr">
                 <div className="para">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Dolorum ut cumque debitis earum perferendis porro ratione ex
-                  soluta, repudiandae sint! Nulla labore debitis sequi est dicta
-                  mollitia voluptate illum itaque? Lorem ipsum dolor sit, amet
-                  consectetur adipisicing elit. Dicta adipisci maiores, nisi
-                  nihil quasi facere esse in labore incidunt laboriosam!
-                  Voluptatum minima ex quos fugit numquam, eveniet labore vel
-                  aliquam.
+                  <ul>
+                    <li>
+                      Ready for a fun mental challenges ? Here is a game with
+                      some hidden cards to unreveil.
+                    </li>
+                    <li>
+                      As a player your task is to match pairs of images that are
+                      randomly placed.
+                    </li>
+                    <li>
+                      <b>Technologies Used:</b> HTML, CSS, React.Js.
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -143,8 +157,8 @@ export default function Work() {
             <Github fill="white" width="30px" />
           </a>
 
-          <YouTube fill="white" width="30px" />
-          <Twitter fill="white" width="30px" />
+          {/* <YouTube fill="white" width="30px" />
+          <Twitter fill="white" width="30px" /> */}
           <hr />
         </div>
         <div className="nav-bar">
@@ -163,13 +177,10 @@ export default function Work() {
             About
           </p>
 
-          <p
-            onClick={() => {
-              navigate("/contact");
-            }}
-          >
-            Contact
+          <p>
+            <a href="mailto:amailtoranjith@gmail.com">Contact</a>
           </p>
+
           <hr />
         </div>
       </div>
